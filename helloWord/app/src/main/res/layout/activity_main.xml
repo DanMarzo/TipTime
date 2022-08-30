@@ -6,32 +6,20 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="97dp"
-        android:layout_height="56dp"
-        android:backgroundTintMode="src_over"
-        android:onClick="sendMensagem"
-        android:text="@string/button_enviar"
+    <EditText
+        android:id="@+id/editTextNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginBottom="608dp"
+        android:ems="10"
+        android:inputType="number"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.949"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.042" />
+        app:layout_constraintStart_toStartOf="parent" />
 
-    <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/textInputEditText"
-        android:layout_width="239dp"
-        android:layout_height="48dp"
-        android:hint="@string/text_input"
-        android:textColorHint="#5D4037"
-        app:layout_constraintBaseline_toBaselineOf="@+id/button"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/button"
-        app:layout_constraintHorizontal_bias="0.372"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.038" />
-
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:layout_editor_absoluteX="96dp"
+        tools:layout_editor_absoluteY="301dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
