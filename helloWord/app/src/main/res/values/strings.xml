@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Olá mundo</string>
+    <string name="button_enviar">Enviar</string>
+    <string name="text_input">Digite um texto</string>
+</resources>
