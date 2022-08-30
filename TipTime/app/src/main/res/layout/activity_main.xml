@@ -6,85 +6,93 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+
     <EditText
-        android:id="@+id/editTextNumberDecimal"
+        android:id="@+id/inputEntradaGorjeta"
         android:layout_width="260dp"
         android:layout_height="59dp"
         android:ems="10"
+        android:fontFamily="sans-serif"
         android:hint="@string/entradaGorgeta"
         android:inputType="numberDecimal"
+        android:textAlignment="textStart"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.124"
+        app:layout_constraintHorizontal_bias="0.142"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.081"
+        app:layout_constraintVertical_bias="0.071"
         tools:text="@string/entradaGorgeta" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/perguntaGorjeta"
         android:layout_width="222dp"
         android:layout_height="25dp"
         android:text="@string/avaliarServico"
+        android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.1"
+        app:layout_constraintHorizontal_bias="0.131"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextNumberDecimal"
-        app:layout_constraintVertical_bias="0.015"
+        app:layout_constraintTop_toBottomOf="@+id/inputEntradaGorjeta"
+        app:layout_constraintVertical_bias="0.0"
         tools:text="@string/avaliarServico" />
-
 
     <RadioGroup
         android:id="@+id/avaliarOpcoes"
-        android:layout_width="158dp"
-        android:layout_height="148dp"
+        android:layout_width="168dp"
+        android:layout_height="157dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.073"
+        app:layout_constraintHorizontal_bias="0.119"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
-        app:layout_constraintVertical_bias="0.052">
+        app:layout_constraintTop_toBottomOf="@+id/perguntaGorjeta"
+        app:layout_constraintVertical_bias="0.0">
 
         <RadioButton
             android:id="@+id/opcaoIncrivel"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/incrivel1" />
+            android:text="@string/incrivel1"
+            android:textSize="16sp" />
 
         <RadioButton
             android:id="@+id/opcaoBom"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/bom2" />
+            android:text="@string/bom2"
+            android:textSize="16sp" />
 
         <RadioButton
             android:id="@+id/opcaoOk"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/ok3" />
+            android:text="@string/ok3"
+            android:textSize="16sp" />
     </RadioGroup>
 
     <Switch
         android:id="@+id/switch1"
-        android:layout_width="368dp"
-        android:layout_height="61dp"
+        android:layout_width="347dp"
+        android:layout_height="54dp"
         android:text="@string/pontaArredondada"
+        android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.441"
+        app:layout_constraintHorizontal_bias="0.453"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/avaliarOpcoes"
-        app:layout_constraintVertical_bias="0.048" />
+        app:layout_constraintVertical_bias="0.063" />
 
     <Button
-        android:id="@+id/button"
-        android:layout_width="372dp"
+        android:id="@+id/botaoCalcular"
+        android:layout_width="350dp"
         android:layout_height="51dp"
         android:layout_marginTop="28dp"
         android:text="@string/botaoCalcular"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.456"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/switch1"
         app:layout_constraintVertical_bias="0.0" />
@@ -94,11 +102,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/CalcularGor"
+        android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.875"
+        app:layout_constraintHorizontal_bias="0.893"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button"
+        app:layout_constraintTop_toBottomOf="@+id/botaoCalcular"
         app:layout_constraintVertical_bias="0.054" />
 
 
