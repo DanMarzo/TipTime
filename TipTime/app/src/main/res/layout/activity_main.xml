@@ -8,9 +8,10 @@
 
     <EditText
         android:id="@+id/editTextNumberDecimal"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="260dp"
+        android:layout_height="59dp"
         android:ems="10"
+        android:hint="@string/entradaGorgeta"
         android:inputType="numberDecimal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -22,14 +23,83 @@
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="204dp"
-        android:layout_height="20dp"
-        android:text="TextView"
+        android:layout_width="222dp"
+        android:layout_height="25dp"
+        android:text="@string/avaliarServico"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.12"
+        app:layout_constraintHorizontal_bias="0.1"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextNumberDecimal"
-        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintVertical_bias="0.015"
         tools:text="@string/avaliarServico" />
+
+
+    <RadioGroup
+        android:id="@+id/avaliarOpcoes"
+        android:layout_width="158dp"
+        android:layout_height="148dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.073"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.052">
+
+        <RadioButton
+            android:id="@+id/opcaoIncrivel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/incrivel1" />
+
+        <RadioButton
+            android:id="@+id/opcaoBom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/bom2" />
+
+        <RadioButton
+            android:id="@+id/opcaoOk"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/ok3" />
+    </RadioGroup>
+
+    <Switch
+        android:id="@+id/switch1"
+        android:layout_width="368dp"
+        android:layout_height="61dp"
+        android:text="@string/pontaArredondada"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.441"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/avaliarOpcoes"
+        app:layout_constraintVertical_bias="0.048" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="372dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="28dp"
+        android:text="@string/botaoCalcular"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/switch1"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/CalcularGor"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.875"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button"
+        app:layout_constraintVertical_bias="0.054" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
