@@ -15,7 +15,10 @@ android {
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
-
+    buildFeatures {
+        viewBinding = true
+    }
+    //esse Featuresa para ligar elementos
     buildTypes {
         release {
             minifyEnabled false
