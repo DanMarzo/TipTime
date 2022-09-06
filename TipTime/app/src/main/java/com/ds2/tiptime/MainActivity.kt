@@ -12,10 +12,16 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         binding = ActivityMainBinding.inflate(layoutInflater)
+        binding.botaoCalcular.setOnClickListener{CalculateTip()}
 
-        val costOfService = binding.inputEntradaGorjeta
+        /*val costOfService = binding.inputEntradaGorjeta
         costOfService.text = "Hi, ?".toString()
 
-        binding.inputEntradaGorjeta.text = "vixe, mudou!".toString()
+        binding.inputEntradaGorjeta.text = "vixe, mudou!".toString()*/
+    }
+
+    fun CalculateTip()
+    {
+
     }
 }
