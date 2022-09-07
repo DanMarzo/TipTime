@@ -3,6 +3,7 @@ package com.ds2.tiptime
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.ds2.tiptime.databinding.ActivityMainBinding
+import java.text.NumberFormat
 
 
 class MainActivity : AppCompatActivity() {
@@ -12,7 +13,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(R.layout.activity_main)
-        binding.botaoCalcular.setOnClickListener { calculateTip() }
+        binding.calculateButton.setOnClickListener { calculateTip() }
 
 //        val costOfService = binding.inputEntradaGorjeta
 //        costOfService.text = "Hi, ?".toString()
@@ -22,17 +23,23 @@ class MainActivity : AppCompatActivity() {
 
     fun calculateTip()
     {
-        val stringInEdit = binding.inputEntradaGorjeta.toString()
-        val const = stringInEdit.toDouble()
+        val stringInEdit = binding.costOfService.toString()
+        val cost = stringInEdit.toDouble()
 
-        val selectId = binding.avaliarOpcoes.checkedRadioButtonId
+        val selectId = binding.tipOptions.checkedRadioButtonId
 
         val tipPercentage = when (selectId)
         {
-            R.id.opcaoIncrivel -> 0.20
-            R.id.opcaoBom -> 0.18
+            R.id.optionTwentyPercent -> 0.20
+            R.id.optionEighteenPercent -> 0.18
             else -> 0.15
         }
+
+        var tip = tipPercentage * cost
+
+        val formattedTip = NumberFormat.getCurrencyInstance().format(tip)
+        binding.tipResult.text = formattedTip
+
 
         /*if (radioButon1)
         {
