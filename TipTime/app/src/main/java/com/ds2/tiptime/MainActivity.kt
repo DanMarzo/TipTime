@@ -14,6 +14,7 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(R.layout.activity_main)
         binding.calculateButton.setOnClickListener { calculateTip() }
+        //setContentView(binding.root)
 
 //        val costOfService = binding.inputEntradaGorjeta
 //        costOfService.text = "Hi, ?".toString()
