@@ -11,8 +11,14 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
+<<<<<<< HEAD
         setContentView(binding.root)
         binding.calculateButton.setOnClickListener{CalculateTip()}
+=======
+        setContentView(R.layout.activity_main)
+        binding.calculateButton.setOnClickListener { calculateTip() }
+        //setContentView(binding.root)
+>>>>>>> 72f00869967b9db75a4f495cb00c9dbdcc679e41
 
     }
 
