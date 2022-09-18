@@ -8,26 +8,20 @@ import java.text.NumberFormat
 
 class MainActivity : AppCompatActivity() {
     lateinit var binding: ActivityMainBinding
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
-        setContentView(R.layout.activity_main)
-        binding.calculateButton.setOnClickListener { calculateTip() }
+        setContentView(binding.root)
+        binding.calculateButton.setOnClickListener{CalculateTip()}
 
-//        val costOfService = binding.inputEntradaGorjeta
-//        costOfService.text = "Hi, ?".toString()
-//
-//        binding.inputEntradaGorjeta.text = "vixe, mudou!".toString()
     }
 
-    fun calculateTip()
+    fun CalculateTip()
     {
-        val stringInEdit = binding.costOfService.toString()
-        val cost = stringInEdit.toDouble()
+        val stringInTextField = binding.costOfService.text.toString()
+        val cost = stringInTextField.toDouble()
 
         val selectId = binding.tipOptions.checkedRadioButtonId
-
         val tipPercentage = when (selectId)
         {
             R.id.optionTwentyPercent -> 0.20
@@ -36,26 +30,14 @@ class MainActivity : AppCompatActivity() {
         }
 
         var tip = tipPercentage * cost
+        val roundUp = binding.roundUpSwitch.isChecked
+
+        if (roundUp)
+        {
+            tip = kotlin.math.ceil(tip)
+        }
 
         val formattedTip = NumberFormat.getCurrencyInstance().format(tip)
-        binding.tipResult.text = formattedTip
-
-
-        /*if (radioButon1)
-        {
-            val porcentagem = 0.2
-        }
-        if (radioButon1)
-        {
-            val porcentagem = 0.18
-        }
-        if (radioButon1)
-        {
-            val porcentagem = 0.15
-        }
-
-        var resultado = valorDaTextBox * porcentagem
-
-        var tipTotal = binding.tipTotal.*/
+        binding.tipResult.text = tip.toString()
     }
 }
